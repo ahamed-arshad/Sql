@@ -1,0 +1,67 @@
+CREATE TABLE patient (
+    patient_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    date_of_birth DATE,
+    gender ENUM('Male', 'Female', 'Other'),
+    address VARCHAR(100),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    country VARCHAR(50),
+    phone_number VARCHAR(15),
+    email VARCHAR(100),
+    insurance_provider VARCHAR(100),
+    insurance_id VARCHAR(50),
+    emergency_contact_name VARCHAR(100),
+    emergency_contact_relationship VARCHAR(50),
+    emergency_contact_phone VARCHAR(15)
+);
+
+CREATE TABLE doctor (
+    doctor_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    specialization VARCHAR(100),
+    hospital_affiliation VARCHAR(100),
+    email VARCHAR(100),
+    phone_number VARCHAR(15)
+);
+
+CREATE TABLE appointment (
+    appointment_id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT,
+    doctor_id INT,
+    appointment_date DATETIME,
+    appointment_type ENUM('Routine Checkup', 'Consultation', 'Treatment', 'Follow-up'),
+    diagnosis VARCHAR(255),
+    prescription VARCHAR(255),
+    notes TEXT,
+    FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
+    FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id)
+);
+
+CREATE TABLE medical_history (
+    history_id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT,
+    condition VARCHAR(100),
+    diagnosis_date DATE,
+    treatment VARCHAR(255),
+    notes TEXT,
+    FOREIGN KEY (patient_id) REFERENCES patient(patient_id)
+);
+
+CREATE TABLE medication (
+    medication_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    dosage VARCHAR(50),
+    instructions VARCHAR(255)
+);
+
+CREATE TABLE patient_medication (
+    patient_id INT,
+    medication_id INT,
+    start_date DATE,
+    end_date DATE,
+    FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
+    FOREIGN KEY (medication_id) REFERENCES medication(medication_id)
+);
