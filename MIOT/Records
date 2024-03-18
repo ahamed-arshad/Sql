@@ -1,0 +1,59 @@
+INSERT INTO Patient (PatientID, FirstName, LastName, DateOfBirth, Gender, Address, PhoneNumber, Email) VALUES
+(1, 'John', 'Doe', '1990-05-15', 'Male', '123 Main St, Cityville', '555-1234', 'john.doe@example.com'),
+(2, 'Jane', 'Smith', '1985-09-20', 'Female', '456 Elm St, Townsville', '555-5678', 'jane.smith@example.com'),
+(3, 'Michael', 'Johnson', '1978-03-10', 'Male', '789 Oak St, Villageton', '555-9012', 'michael.johnson@example.com'),
+(4, 'Emily', 'Brown', '1995-12-28', 'Female', '101 Pine St, Hamletville', '555-3456', 'emily.brown@example.com'),
+(5, 'Christopher', 'Martinez', '1982-07-14', 'Male', '202 Cedar St, Suburbia', '555-7890', 'christopher.martinez@example.com'),
+(6, 'Jessica', 'Garcia', '1973-11-03', 'Female', '303 Maple St, Countryside', '555-2345', 'jessica.garcia@example.com'),
+(7, 'David', 'Rodriguez', '1988-02-18', 'Male', '404 Birch St, Ruralville', '555-6789', 'david.rodriguez@example.com'),
+(8, 'Amanda', 'Martinez', '1992-06-25', 'Female', '505 Spruce St, Townville', '555-1234', 'amanda.martinez@example.com'),
+(9, 'James', 'Hernandez', '1980-09-08', 'Male', '606 Willow St, Cityville', '555-5678', 'james.hernandez@example.com'),
+(10, 'Sarah', 'Lopez', '1987-04-17', 'Female', '707 Pine St, Villageton', '555-9012', 'sarah.lopez@example.com'),
+(11, 'Daniel', 'Gonzalez', '1975-01-29', 'Male', '808 Oak St, Hamletville', '555-3456', 'daniel.gonzalez@example.com'),
+(12, 'Jennifer', 'Perez', '1990-10-05', 'Female', '909 Cedar St, Suburbia', '555-7890', 'jennifer.perez@example.com'),
+(13, 'Robert', 'Wilson', '1983-05-19', 'Male', '1010 Maple St, Countryside', '555-2345', 'robert.wilson@example.com'),
+(14, 'Elizabeth', 'Torres', '1971-12-07', 'Female', '1111 Birch St, Ruralville', '555-6789', 'elizabeth.torres@example.com'),
+(15, 'William', 'Flores', '1986-07-30', 'Male', '1212 Spruce St, Townville', '555-1234', 'william.flores@example.com'),
+(16, 'Megan', 'Rivera', '1981-03-24', 'Female', '1313 Willow St, Cityville', '555-5678', 'megan.rivera@example.com'),
+(17, 'David', 'Gomez', '1977-08-11', 'Male', '1414 Pine St, Villageton', '555-9012', 'david.gomez@example.com'),
+(18, 'Samantha', 'Reyes', '1993-11-09', 'Female', '1515 Oak St, Hamletville', '555-3456', 'samantha.reyes@example.com'),
+(19, 'Joseph', 'Morgan', '1979-04-03', 'Male', '1616 Cedar St, Suburbia', '555-7890', 'joseph.morgan@example.com'),
+(20, 'Ashley', 'Cook', '1997-09-14', 'Female', '1717 Maple St, Countryside', '555-2345', 'ashley.cook@example.com'),
+(21, 'Maria', 'Murphy', '1974-05-27', 'Female', '1818 Birch St, Ruralville', '555-6789', 'maria.murphy@example.com'),
+(22, 'Charles', 'Sanchez', '1989-01-31', 'Male', '1919 Spruce St, Townville', '555-1234', 'charles.sanchez@example.com'),
+(23, 'Nicole', 'Evans', '1984-08-16', 'Female', '2020 Willow St, Cityville', '555-5678', 'nicole.evans@example.com'),
+(24, 'Matthew', 'Turner', '1976-02-22', 'Male', '2121 Pine St, Villageton', '555-9012', 'matthew.turner@example.com'),
+(25, 'Jessica', 'Baker', '1991-11-04', 'Female', '2222 Oak St, Hamletville', '555-3456', 'jessica.baker@example.com'),
+(26, 'Andrew', 'Chavez', '1988-06-10', 'Male', '2323 Cedar St, Suburbia', '555-7890', 'andrew.chavez@example.com'),
+(27, 'Michelle', 'Morales', '1972-03-18', 'Female', '2424 Maple St, Countryside', '555-2345', 'michelle.morales@example.com'),
+(28, 'Kevin', 'Owens', '1985-10-07', 'Male', '2525 Birch St, Ruralville', '555-6789', 'kevin.owens@example.com'),
+(29, 'Kimberly', 'Ramirez', '1996-05-22', 'Female', '2626 Spruce St, Townville', '555-1234', 'kimberly.ramirez@example.com'),
+(30, 'Ryan', 'Gutierrez', '1982-12-13', 'Male', '2727 Willow St, Cityville', '555-5678', 'ryan.gutierrez@example.com');
+
+INSERT INTO Doctor (DoctorID, FirstName, LastName, Specialty, PhoneNumber, Email) VALUES
+(1, 'Dr. Emily', 'Johnson', 'Cardiology', '555-1111', 'emily.johnson@hospital.com'),
+(2, 'Dr. Michael', 'Williams', 'Pediatrics', '555-2222', 'michael.williams@hospital.com'),
+(3, 'Dr. Jennifer', 'Brown', 'Dermatology', '555-3333', 'jennifer.brown@hospital.com'),
+(4, 'Dr. Matthew', 'Davis', 'Orthopedics', '555-4444', 'matthew.davis@hospital.com'),
+(5, 'Dr. Jessica', 'Martinez', 'Neurology', '555-5555', 'jessica.martinez@hospital.com');
+
+INSERT INTO Appointment (AppointmentID, PatientID, DoctorID, AppointmentDate, Notes) VALUES
+(1, 1, 1, '2024-03-20 09:00:00', 'Annual checkup'),
+(2, 2, 2, '2024-03-21 10:30:00', 'Vaccination'),
+(3, 3, 3, '2024-03-22 14:00:00', 'Skin condition consultation'),
+(4, 4, 4, '2024-03-23 11:15:00', 'Follow-up on knee injury'),
+(5, 5, 5, '2024-03-24 13:45:00', 'Headache evaluation');
+
+INSERT INTO MedicalRecord (RecordID, PatientID, DoctorID, DateRecorded, Diagnosis, Treatment, Prescription) VALUES
+(1, 1, 1, '2024-03-20', 'Normal', 'Routine checkup', 'None'),
+(2, 2, 2, '2024-03-21', 'Healthy', 'Administered vaccine', 'None'),
+(3, 3, 3, '2024-03-22', 'Eczema', 'Prescribed topical cream', 'Topical cream'),
+(4, 4, 4, '2024-03-23', 'Knee sprain', 'Physical therapy recommended', 'Physical therapy sessions'),
+(5, 5, 5, '2024-03-24', 'Migraine', 'Further evaluation required', 'None');
+
+INSERT INTO Insurance (InsuranceID, PatientID, InsuranceProvider, PolicyNumber, ExpiryDate) VALUES
+(1, 1, 'HealthGuard', 'HG12345', '2025-05-31'),
+(2, 2, 'CarePlus', 'CP67890', '2024-12-31'),
+(3, 3, 'MediCare', 'MC54321', '2024-09-30'),
+(4, 4, 'WellnessFirst', 'WF98765', '2024-11-30'),
+(5, 5, 'LifeCare', 'LC13579', '2024-10-31');
